@@ -27,7 +27,7 @@ jobs:
           gradle-version: "8.7"
 
       - name: Build release APK
-        run: gradle assembleRelease
+        run: gradle assembleRelease --no-configuration-cache
 
       - name: Upload release APK
         uses: softprops/action-gh-release@v2
