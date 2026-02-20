@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.HouseBudget" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">#F7FAFF</item>
+        <item name="android:statusBarColor">#F7FAFF</item>
+        <item name="android:navigationBarColor">#F7FAFF</item>
+    </style>
+</resources>
