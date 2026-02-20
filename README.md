@@ -33,3 +33,4 @@ APK를 Release asset으로 업로드합니다.
 ## 참고
 - Java/Android Studio가 없는 환경에서는 빌드가 불가합니다.
 - GitHub 릴리즈 자산은 `app/build/outputs/apk/release/app-release.apk` 입니다.
+- Android Studio에서 `Run`/`Build > Generate Signed Bundle / APK`로 바로 APK를 만들 수 있습니다.
