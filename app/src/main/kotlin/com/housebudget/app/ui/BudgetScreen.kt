@@ -19,11 +19,9 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.FilledTonalButton
-import androidx.compose.material3.FilterChip
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -295,19 +293,13 @@ private fun AddTransactionDialog(
                 verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    FilledTonalButton(
-                        onClick = { selectedType = TransactionType.EXPENSE },
-                        colors = ButtonDefaults.filledTonalButtonColors(
-                            containerColor = if (selectedType == TransactionType.EXPENSE) SoftBlue else Color.Transparent
-                        )
+                    OutlinedButton(
+                        onClick = { selectedType = TransactionType.EXPENSE }
                     ) {
                         Text("지출")
                     }
-                    FilledTonalButton(
-                        onClick = { selectedType = TransactionType.INCOME },
-                        colors = ButtonDefaults.filledTonalButtonColors(
-                            containerColor = if (selectedType == TransactionType.INCOME) SoftBlue else Color.Transparent
-                        )
+                    OutlinedButton(
+                        onClick = { selectedType = TransactionType.INCOME }
                     ) {
                         Text("수입")
                     }
@@ -339,11 +331,9 @@ private fun AddTransactionDialog(
                 Text("카테고리", style = MaterialTheme.typography.labelMedium)
                 LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                     items(categories) { chip ->
-                        FilterChip(
-                            selected = category == chip,
-                            onClick = { category = chip },
-                            label = { Text(chip) }
-                        )
+                        OutlinedButton(onClick = { category = chip }) {
+                            Text(chip)
+                        }
                     }
                 }
             }
