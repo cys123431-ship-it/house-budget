@@ -1,5 +1,5 @@
 <resources>
-    <style name="Theme.HouseBudget" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.HouseBudget" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:windowBackground">#F7FAFF</item>
         <item name="android:statusBarColor">#F7FAFF</item>
         <item name="android:navigationBarColor">#F7FAFF</item>
